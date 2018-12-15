@@ -2,7 +2,7 @@
 
 command -v gio >/dev/null 2>&1 || { echo "[error] gio missing"; exit 1; }
 command -v ctrtool >/dev/null 2>&1 || { echo "[error] ctrtool missing"; exit 1; }
-command -v 3ds-thumbnail >/dev/null 2>&1 || { echo "[error] 3ds	-thumbnail missing"; exit 1; }
+command -v 3ds-thumbnail >/dev/null 2>&1 || { echo "[error] 3ds-thumbnail missing"; exit 1; }
 
 # set to no to remove version number on the icon
 
