@@ -1,0 +1,4 @@
+[Thumbnailer Entry]
+TryExec=/usr/bin/3ds-thumbnailer
+Exec=/usr/bin/3ds-thumbnailer %i %o %s &>/tmp/b
+MimeType=application/x-ctr-cci;
