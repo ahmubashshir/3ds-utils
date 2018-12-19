@@ -1,3 +1,2 @@
-usr
-Project_CTR
 *.o
+src/ctrtool/ctrtool
