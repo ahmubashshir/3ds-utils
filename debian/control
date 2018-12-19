@@ -11,7 +11,7 @@ Package: 3ds-utils
 Section: utils
 Priority: optional
 Architecture:any
-Depends: ${misc:Depends}, ${shlibs:Depends},
+Depends: ${misc:Depends}, ${shlibs:Depends},python3-pil
 Homepage: http://github.com/ahmubashshir/3ds-thumbnailer
 Description: 3ds thumbnailer
  Generates thumbnails from nintendo 3ds rom.
