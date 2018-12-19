@@ -1,9 +1,16 @@
+Source: 3ds-utils
+Maintainer: Ahmad Hasan Mubashshir<ahmubashshir@gmail.com>
+Homepage: http://github.com/ahmubashshir/3ds-thumbnailer
+Standards-Version: 4.1.5
+Build-Depends: libtinyxml2-dev,
+    libtinyxml-dev
+Priority: optional
+Section: utils
+
 Package: 3ds-utils
 Section: utils
 Priority: optional
-Source:3ds-utils
-Architecture: amd64
-Depends: libc6,libtinyxml2-6,libgcc1,libstdc++6
+Depends: ${misc:Depends}, ${shlibs:Depends},
 Maintainer: Ahmad Hasan Mubashshir<ahmubashshir@gmail.com>
 Homepage: http://github.com/ahmubashshir/3ds-thumbnailer
 Description: 3ds thumbnailer
