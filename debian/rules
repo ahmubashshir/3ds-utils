@@ -3,5 +3,6 @@ build:
 	make
 clean:
 	make clean
+	rm -rf debian/.debhelper debian/3ds-utils debian/3ds-utils.substvars debian/files
 %:
 	dh $@
