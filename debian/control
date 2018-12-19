@@ -2,7 +2,8 @@ Source: 3ds-utils
 Maintainer: Ahmad Hasan Mubashshir <ahmubashshir@gmail.com>
 Homepage: http://github.com/ahmubashshir/3ds-thumbnailer
 Standards-Version: 4.1.5
-Build-Depends: libtinyxml2-dev,
+Build-Depends: debhelper (>=11),
+	libtinyxml2-dev,
     libtinyxml-dev
 Priority: optional
 Section: utils
