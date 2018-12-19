@@ -1,5 +1,11 @@
 3ds-utils (1.0.0-1) bionic; urgency=medium
 
+  * Added python dependencies.
+
+ --  Ahmad Hasan Mubashshir <ahmubashshir@gmail.com>  Thu, 20 Dec 2018 01:30:13 +0600
+
+3ds-utils (1.0.0-1) bionic; urgency=medium
+
   * 	new file:   debian/source/format
   * 	modified:   debian/control
   * 	new file:   debian/source/format
