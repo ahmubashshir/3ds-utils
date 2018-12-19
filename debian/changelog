@@ -1,4 +1,4 @@
-3ds-utils  (1.0.0-1) bionic; urgency=medium
+3ds-utils (1.0.0-1) bionic; urgency=medium
 
   * 	modified:   debian/control
   * 	modified:   .gitignore 	deleted:    debian/format
