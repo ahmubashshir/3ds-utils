@@ -1,0 +1,12 @@
+Format: https://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
+Upstream-Name: 3ds-utils
+Upstream-Contact: Ahmad Hasan Mubashshir <ahmubashshir@gmail.com>
+Source: https://github.com/ahmubashshir/3ds-utils
+
+Files: *
+Copyright: 2018 Ahmad Hasan Mubashshir
+License: GPL-2+
+
+Files:src/ctrtool/*
+Copyright: 2014 3DSGuy
+License: Expat

@@ -1,0 +1,11 @@
+Package: 3ds-utils
+Section: utils
+Priority: optional
+Source:3ds-utils
+Architecture: amd64
+Depends: libc6,libtinyxml2-6,libgcc1,libstdc++6
+Maintainer: Ahmad Hasan Mubashshir<ahmubashshir@gmail.com>
+Homepage: http://github.com/ahmubashshir/3ds-thumbnailer
+Description: 3ds thumbnailer
+ Generates thumbnails from nintendo 3ds rom.
+

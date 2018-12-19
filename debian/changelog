@@ -1,0 +1,64 @@
+3ds-utils (1.0.0-1ubuntu1) UNRELEASED; urgency=medium
+
+  *  Initial commit
+  * 	modified:   src/3ds.thumbnailer 	modified:   src/x-3ds-rom.xml
+  *  Changes to be committed: 	new file:   debian/.gitignore
+  * added ctrtool
+  * Create README.md
+  *  Changes to be committed: 	new file:   src/3ds-thumbnail 	modified:   src/3ds-thumbnailer
+  *  Initial commit
+  * 	modified:   src/3ds.thumbnailer 	modified:   src/x-3ds-rom.xml
+  *  Changes to be committed: 	new file:   debian/.gitignore
+  * added ctrtool
+  * Create README.md
+  *  Changes to be committed: 	new file:   src/3ds-thumbnail 	modified:   src/3ds-thumbnailer
+  *  Initial commit
+  * 	modified:   src/3ds.thumbnailer 	modified:   src/x-3ds-rom.xml
+  *  Changes to be committed: 	new file:   debian/.gitignore
+  * added ctrtool
+  * Create README.md
+  *  Changes to be committed: 	new file:   src/3ds-thumbnail 	modified:   src/3ds-thumbnailer
+
+ -- Mubashshir <mubashshir@mubashshir-mint>  Wed, 19 Dec 2018 22:46:19 +0600
+
+3ds-utils (1.0.0-1) bionic tara; urgency=low
+* commit 3d0a08e84abd7fcb655fa3784c48408fefc85ab3
+	Author: Mubashshir <ahmubashshir@gmail.com>
+	Date:   Sat Dec 15 23:53:28 2018 +0600
+
+		 Changes to be committed:
+		        new file:   src/3ds-thumbnail
+		        modified:   src/3ds-thumbnailer
+
+* commit d46bde673ab38f7e094cd5fdf3de9da202b53c3a
+	Author: Mubashshir <ahmubashshir@gmail.com>
+	Date:   Sat Dec 15 23:53:07 2018 +0600
+
+		Create README.md
+
+* commit 3188c4a9379189d3b27a616c0b809199ca97123f
+	Author: Mubashshir <ahmubashshir@gmail.com>
+	Date:   Sat Dec 15 23:36:54 2018 +0600
+
+		added ctrtool
+
+* commit 924577ef7d0f3d148ee74afda222408d246f3856
+	Author: Mubashshir <ahmubashshir@gmail.com>
+	Date:   Sat Dec 15 20:56:20 2018 +0600
+
+		 Changes to be committed:
+		        new file:   debian/.gitignore
+
+* commit 204b78bd5c127c400803c4343efe32489794f868
+	Author: Mubashshir <ahmubashshir@gmail.com>
+	Date:   Sat Dec 15 20:54:16 2018 +0600
+
+		        modified:   src/3ds.thumbnailer
+		        modified:   src/x-3ds-rom.xml
+
+* commit 7b89bfaae9a2f3c39ecd73bd081fa72fe9c93230
+	Author: Mubashshir <ahmubashshir@gmail.com>
+	Date:   Sat Dec 15 20:52:27 2018 +0600
+
+		 Initial commit
+-- Ahmad Hasan Mubashshir <ahmubashshir@gmail.com>  4, 19 12 2018 10:31:00 +0600
