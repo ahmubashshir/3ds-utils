@@ -1,6 +1,7 @@
 Source: 3ds-utils
 Maintainer: Ahmad Hasan Mubashshir <ahmubashshir@gmail.com>
 Homepage: http://github.com/ahmubashshir/3ds-thumbnailer
+Standards-Version: 4.1.4
 Build-Depends: debhelper (>=11),
 	libtinyxml2-dev,
     libtinyxml-dev,python3-pil
@@ -11,7 +12,7 @@ Package: 3ds-utils
 Section: utils
 Priority: optional
 Architecture:any
-Depends: ${misc:Depends}, ${shlibs:Depends},python3-pil
+Depends: ${misc:Depends}, ${shlibs:Depends},python3,python3-pil
 Homepage: http://github.com/ahmubashshir/3ds-thumbnailer
 Description: 3ds thumbnailer
  Generates thumbnails from nintendo 3ds rom.
