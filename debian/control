@@ -10,8 +10,8 @@ Section: utils
 Package: 3ds-utils
 Section: utils
 Priority: optional
+Architecture:any
 Depends: ${misc:Depends}, ${shlibs:Depends},
-Maintainer: Ahmad Hasan Mubashshir<ahmubashshir@gmail.com>
 Homepage: http://github.com/ahmubashshir/3ds-thumbnailer
 Description: 3ds thumbnailer
  Generates thumbnails from nintendo 3ds rom.
