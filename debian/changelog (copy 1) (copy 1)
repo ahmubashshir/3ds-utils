@@ -1,12 +1,11 @@
 3ds-utils (1.0.0-1) bionic; urgency=medium
 
-  [ Ahmad Hasan Mubashshir ]
   * 	modified:   debian/control
   * 	modified:   .gitignore 	deleted:    debian/format
   * 	modified:   debian/control
   * 	modified:   debian/control
 
- -- Ahmad Hasan Mubashshir <ahmubashshir@gmail.com>  Tue, 25 Dec 2018 01:27:04 +0600
+ -- Mubashshir Ahmad Hasan <mubashshir@mubashshir-mint>  Tue, 25 Dec 2018 01:12:53 +0600
 
 3ds-utils (1.0.0-1) bionic; urgency=medium
 

@@ -16,6 +16,12 @@ endif
 all: ctrtool
 ctrtool:
 	make -C src/ctrtool
+deb:
+	gbp dch
+	sed -i -e 's|Mubashshir Ahmad Hasan <mubashshir@mubashshir-mint>|Ahmad Hasan Mubashshir <ahmubashshir@gmail.com>|g' debian/changelog
+	git add .
+	git commit -m "Packaging Now"
+	gbp buildpackage
 clean:
 	make -C src/ctrtool clean
 install:
