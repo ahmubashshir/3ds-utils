@@ -21,7 +21,7 @@ deb:
 	sed -i -e 's|Mubashshir Ahmad Hasan <mubashshir@mubashshir-mint>|Ahmad Hasan Mubashshir <ahmubashshir@gmail.com>|g' debian/changelog
 	git add .
 	git commit -m "Packaging Now"
-	gbp buildpackage
+	gbp buildpackage --git-tag --git-sign-tags -kb5ac9a5e093f60a29aa1692f4cc9a8013a65e7d4
 clean:
 	make -C src/ctrtool clean
 install:
