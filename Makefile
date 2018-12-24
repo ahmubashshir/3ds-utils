@@ -24,7 +24,7 @@ deb:
 	@git add .
 	@git commit -m "Packaging Now"
 	@echo "->Started Building packages"
-	@gbp buildpackage --git-tag --git-sign-tags -kb5ac9a5e093f60a29aa1692f4cc9a8013a65e7d4
+	@gbp buildpackage --git-tag --git-retag --git-sign-tags -kb5ac9a5e093f60a29aa1692f4cc9a8013a65e7d4
 clean:
 	make -C src/ctrtool clean
 install:

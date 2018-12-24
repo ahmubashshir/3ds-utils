@@ -1,3 +1,10 @@
+3ds-utils (1.0.0-1ubuntu1) UNRELEASED; urgency=medium
+
+  [ Mubashshir ]
+  * Packaging Now
+
+ -- Ahmad Hasan Mubashshir <ahmubashshir@gmail.com>  Tue, 25 Dec 2018 01:35:21 +0600
+
 3ds-utils (1.0.0-1) bionic; urgency=medium
 
   [ Ahmad Hasan Mubashshir ]
