@@ -1,39 +1,44 @@
 #!/usr/bin/python3
 from PIL import Image
-from math import sqrt
-from random import random
-from os import system
-from shutil import rmtree
-from tempfile import mkdtemp as mktmp
-import sys
-def _3dsicowrite(F,I,pos=0x24C0,LEN=0x1200):
-	wh=int(sqrt(LEN/2))
-	img=Image.new('RGB',(wh,wh),0x00000000)
-	byte=[]
-	i=0
-	tileOrder=[0,1,8,9,2,3,10,11,16,17,24,25,18,19,26,27,4,5,12,13,6,7,14,15,20,21,28,29,22,23,30,31,32,33,40,41,34,35,42,43,48,49,56,57,50,51,58,59,36,37,44,45,38,39,46,47,52,53,60,61,54,55,62,63]
-	with open(F,'rb') as f:
-		f.seek(pos)
-		while f.tell()-pos<LEN:
-			byte.append(int.from_bytes(f.read1(2),byteorder='little'))
-	with open(I,'wb') as f:
-		for tile_y in range(0,wh,8):
-			for tile_x in range(0,wh,8):
-				for k in range(0,8*8):
-					if i==LEN/2:
-						i=0
-					x = tileOrder[k] & 0x7
-					y = tileOrder[k] >> 3
-					color=byte[i]
-					i+=1
-					b = (color & 0x1f) << 3
-					g = ((color >> 5) & 0x3f) << 2
-					r = ((color >> 11) & 0x1f) << 3
-					img.putpixel((tile_x+x,tile_y+y),(r,g,b))
-		img.save(f)
-
+from os import fdopen,dup
+from sys import argv,exit,stdout
 if __name__ == '__main__':
 	try:
-		_3dsicowrite(sys.argv[1],sys.argv[2])
+		i=0
+		img=Image.new('RGB',(48,48),0x00000000)
+		byte=[]
+		tileOrder=[0,1,8,9,2,3,10,11,16,17,24,25,18,19,26,27,4,5,12,13,6,7,14,15,20,21,28,29,22,23,30,31,32,33,40,41,34,35,42,43,48,49,56,57,50,51,58,59,36,37,44,45,38,39,46,47,52,53,60,61,54,55,62,63]
+		with open(argv[1],'rb') as f:
+			length=len(f.read())
+			f.seek(0)
+			if f.read(4).decode('utf-8')!= 'SMDH':
+				f.seek(0)
+				for n in range(0,160,16):
+					f.seek(n)
+					if f.read(8).decode('utf-8',errors="ignore").replace('\x00','')=='icon':
+						i=int.from_bytes(f.read(4),'little')+0x200
+				f.seek(0)
+			f.seek(i+0x24C0)
+			while f.tell()-(i+0x24C0)<0x1200 and f.tell()<length:
+				byte.append(int.from_bytes(f.read1(2),byteorder='little'))
+		if len(byte)==0x900:
+			with open(argv[2],'wb') if argv[2]!='-' else fdopen(dup(stdout.fileno()), 'wb') as f:
+				i=0
+				for tile_y in range(0,48,8):
+					for tile_x in range(0,48,8):
+						for k in range(0,8*8):
+							x = tileOrder[k] & 0x7
+							y = tileOrder[k] >> 3
+							color=byte[i]
+							i+=1
+							b = (color & 0x1f) << 3
+							g = ((color >> 5) & 0x3f) << 2
+							r = ((color >> 11) & 0x1f) << 3
+							img.putpixel((tile_x+x,tile_y+y),(r,g,b))
+				img.save(f,format=(argv[2].split('.')[-1].upper()
+									if '.'+argv[2].split('.')[-1].lower() in
+										Image.registered_extensions().keys()
+									else 'PNG' ))
 	except:
-		sys.exit(2)
+		print('Required positional arguments are missing')
+		exit(2)

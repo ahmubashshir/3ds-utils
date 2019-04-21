@@ -3,20 +3,15 @@
 command -v gio >/dev/null 2>&1 || { echo "[error] gio missing"; exit 1; }
 command -v ctrtool >/dev/null 2>&1 || { echo "[error] ctrtool missing"; exit 1; }
 command -v 3ds-thumbnail >/dev/null 2>&1 || { echo "[error] 3ds-thumbnail missing"; exit 1; }
-
-# set to no to remove version number on the icon
-
 # get parameters
 FILE_URI="$1"
 FILE_THUMB="$2"
 SIZE="$3"
-# get filename extension
-FILE_EXT=$(echo "$FILE_URI" | sed 's/^.*\.\(.*\)/\1/')
 
 # generate temporary local filename
 #cd /tmp
-TMP_LOCAL=$(mktemp -t ".thumb-3ds-XXXXXXXX.${FILE_EXT}")
-TMP_FD=$(mktemp -d '/tmp/.thumb-3ds-XXXXXXXX')
+TMP_LOCAL=$(mktemp -t ".thumb-3ds-XXXXXXXX")
+EXEFS=$(mktemp -t '.thumb-3ds-XXXXXXXX')
 
 # if file is a remote one
 URI_TYPE="${FILE_URI:0:4}"
@@ -39,7 +34,6 @@ else
 fi
 
 # get application icon
-ctrtool --exefsdir="$TMP_FD" "$FILE_LOCAL" &>/dev/null
-3ds-thumbnail "$TMP_FD/icon.bin" "$TMP_FD/icon.png"
-convert -resize ${SIZE}x${SIZE} "$TMP_FD/icon.png"  "${FILE_THUMB}"
-rm -rf "$TMP_LOCAL" "$TMP_FD"
+ctrtool --exefs="$EXEFS" "$FILE_LOCAL" &>/dev/null
+$(dirname $0)/3ds-thumbnail "$EXEFS" -|convert -resize ${SIZE}x${SIZE} png:-  "${FILE_THUMB}"
+rm -rf "$TMP_LOCAL" "$EXEFS"
