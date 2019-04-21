@@ -1,3 +1,9 @@
+3ds-utils (1.0.0-1ubuntu5) bionic; urgency=medium
+
+  * modified:   debian/control
+
+ -- Ahmad Hasan Mubashshir <ahmubashshir@gmail.com>  Mon, 22 Apr 2019 02:33:17 +0600
+
 3ds-utils (1.0.0-1ubuntu4) bionic; urgency=medium
 
   * modified README.md
