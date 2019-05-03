@@ -1,4 +1,4 @@
-#!/bin/bash -x
+#!/bin/bash
 
 command -v gio >/dev/null 2>&1 || { echo "[error] gio missing"; exit 1; }
 command -v ctrtool >/dev/null 2>&1 || { echo "[error] ctrtool missing"; exit 1; }
@@ -15,7 +15,7 @@ EXEFS=$(mktemp -t '.thumb-3ds-XXXXXXXX')
 
 # if file is a remote one
 URI_TYPE="${FILE_URI:0:4}"
-if [ "${URI_TYPE}" = "file" ]
+if [ "${URI_TYPE}" = "file" ]||! [[ FILE_URI =~ *://* ]]
 then
 	# convert URI to local path
 	FILE_PATH=$(printf '%b' "${FILE_URI#*//}")
